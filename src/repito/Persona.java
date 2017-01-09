@@ -1,40 +1,39 @@
-package repito;
-
 
 public class Persona {
 	
-	private int edad;
+	private	int edad;
 	private String nombre;
 	
-	//metodos de acceso:
-	public int getEdad() { //Leer el nombre
-			return edad;
-	}
-	public void setEdad(int edad) {//Escribir el nombre
+		public Persona ()
+		{
+		edad = 0;	//me crea una persona vacía
+		nombre = null;
+		}
+		public Persona (String nombre, int edad)
+		{
 			this.edad = edad;
+			this.nombre = nombre;
+		}
+		
+	//generate getter and setter (para acceder)
+	public String getNombre() {//leer el nombre
+		return nombre;
 	}
-	public String getNombre() {
-			return nombre;
-	}
-	public void setNombre(String nombre) {
-			this.nombre = nombre;// "This" seria el objeto llamador.
-	}
-	public Persona(int edad, String nombre) {
-		super();
-		this.edad = edad;
+	public void setNombre(String nombre) {//leer la edad
 		this.nombre = nombre;
 	}
-	public Persona ()
-	{
-		//me crea una persona vacía
+	public int getEdad() {
+		return edad;
 	}
-	
-	public void mostarPersona ()
-	{
-		System.out.println("Nombre = " + this.nombre);
-		System.out.println("Edad = " + this.edad);
+	public void setEdad(int edad) {
+		this.edad = edad;
 	}
-	
-	
-
-}
+	public String toString()
+	{
+		String persona = "estado";
+		persona = "nombre" + " "+ nombre;
+		persona ="edad" + "  " +edad;
+		return persona;
+		}
+		
+	}
